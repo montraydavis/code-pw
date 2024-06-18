@@ -1,0 +1,21 @@
+(tab)Open Trades Tab
+  (grid) Trades Grid - Displays list of open trades.
+    (row-definition) 
+      (link) Trade ID Link - Link to view trade details
+(tab)All Trades Tab
+  (grid) Trades Grid - Displays list of all trades.
+    (row-definition) 
+      (link) Trade ID Link - Link to view trade details
+(tab)Unsettled Transactions Tab
+  (grid) Trades Grid - Displays list of open trades.
+    (row-definition) 
+      (link) Trade ID Link - Link to view trade details
+(tab)All Transactions Tab
+  (grid) Trades Grid - Displays list of open trades.
+    (row-definition)
+      (link) Trade ID Link - Link to view trade details
+(tab)Associations Tab
+  (grid) Trades Grid - Displays list of open trades.
+    (row-definition) 
+      (link) Trade ID Link - Link to view trade details
+      (link) Investor Commitment Number Link - Link to view trade details

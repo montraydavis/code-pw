@@ -1,0 +1,21 @@
+(@on-load)
+  (if) Already selected a client
+    Display [Exit Client Selection Button]
+  (else)
+    Hide [Exit Client Selection Button]
+(button) Exit Client Selection Button - Button to exit the client selection.
+  (on-click)
+    Navigates back to the [Dashboard] page.
+(container) Client Selection Container - Container to display the client selection list.
+  (input) Client Search Input
+    (on-change)
+      (if) Client Search Input is empty
+        Display all clients
+      (else)
+        Display clients that match the search input
+  (list) Client List
+    (row-definition)
+      (on-click)
+        Selects the client
+        Navigates to the [Dashboard Page].
+      (label) Client Name Label - Displays the client name

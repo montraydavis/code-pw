@@ -1,0 +1,125 @@
+<!--
+
+-->
+
+(dropdown) Data Type Dropdown - Dropdown to select the data type
+    (options)
+        (option) Encompass
+        (option) Data File
+(tab) Standard Fields Tab - Tab to display the standard fields
+    (grid) Standard Fields Grid - Grid to display the standard fields
+        (column-definitions)
+            (column) Compass Field Name
+                (input) Compass Field Name Input - Input to enter the compass field name
+            (column) Data Type
+                (input) Data Type Input - Input to enter the data type
+            (column) Default
+                (dropdown) Default Dropdown - Dropdown to select the default value
+            (column) LOS Field ID
+                (dropdown) LOS Field ID Dropdown - Dropdown to select the LOS field ID
+            (column) Encrypted
+                (toggle) Encrypted Toggle - Toggle to select if the field is encrypted
+            (column) Key RTR Field
+                (toggle) Key RTR Field Toggle - Toggle to select if the field is a key RTR field
+            (column) Unmapped Values
+                (label) Unmapped Values Label - Label to display the unmapped values
+            (column) Mappings
+            (column) Audit Calcs
+                (button) Edit Button - Button to edit the audit calcs
+                (button) Add Button - Button to add the audit calcs
+                (button) Delete Button - Button to delete the audit calcs
+(tab) Custom Fields Tab - Tab to display the custom fields
+    (grid) Custom Fields Grid
+        (column-definitions)
+            (column) Compass Field Name
+                (input) Compass Field Name Input - Input to enter the compass field name
+            (column) Data Type
+                (input) Data Type Input - Input to enter the data type
+            (column) Default
+                (dropdown) Default Dropdown - Dropdown to select the default value
+            (column) LOS Field ID
+                (dropdown) LOS Field ID Dropdown - Dropdown to select the LOS field ID
+            (column) Encrypted
+                (toggle) Encrypted Toggle - Toggle to select if the field is encrypted
+            (column) Key RTR Field
+                (toggle) Key RTR Field Toggle - Toggle to select if the field is a key RTR field
+            (column) Unmapped Values
+                (label) Unmapped Values Label - Label to display the unmapped values
+            (column) Mappings
+            (column) Audit Calcs
+                (button) Edit Button - Button to edit the audit calcs
+                (button) Add Button - Button to add the audit calcs
+                (button) Delete Button - Button to delete the audit calcs
+(tab) Eligibility Fields Tab - Tab to display the eligibility fields
+    (button) Add Eligibility Field Button - Button to add an eligibility field
+    (grid) Eligibility Fields Grid
+        (column-definitions)
+            (column) Compass Eligibility Field Name
+                (input) Compass Eligibility Field Name Input - Input to enter the compass eligibility field name
+            (column) Default
+                (dropdown) Default Input - Input to change the default value
+            (column) LOS Field ID
+                (dropdown) LOS Field ID Dropdown - Dropdown to select the LOS field ID
+            (column) LOS Field Name
+                (input) LOS Field Name Input - Input to enter the LOS field name
+            (column) Encrypted
+                (toggle) Encrypted Toggle - Toggle to select if the field is encrypted
+            (column) Key RTR Field
+                (toggle) Key RTR Field Toggle - Toggle to select if the field is a key RTR field
+            (column) Unmapped Values
+                (label) Unmapped Values Label - Label to display the unmapped values
+            (column) Mappings
+                (button) Edit Button - Button to edit the mappings
+                    (on-click)
+                        (modal) Editing Mappings Modal - Modal to edit the mappings
+                            (grid) Field Mappings Grid - Grid to display the existing field mappings
+                                (column-definitions)
+                                    (column) Input Value(s)
+                                        (input) Input Value(s) Input - Input to enter the input value(s)
+                                    (column) Output Value(s)
+                                        (input) Output Value(s) Input - Input to enter the output value(s)
+                            (button) Add Button - Button to add a mapping
+                                (on-click)
+                                    Should add a mapping to [Field Mappings Grid].
+                            (button) Save Button - Button to save the mappings
+                                (on-click)
+                                    Should save the mappings to the eligibility field.
+                                    Should close [Editing Mappings Modal].
+                            (button) Cancel Button - Button to cancel the editing of the mappings
+                                (on-click)
+                                    Should close [Editing Mappings Modal].
+            (column) Audit Calcs
+                (button) Edit Button - Button to edit the audit calcs
+                    (on-click)
+                        (modal) Editing Mappings Modal - Modal to edit the mappings
+                            (grid) Field Mappings Grid - Grid to display the existing field mappings
+                                (column-definitions)
+                                    (column) Input Value(s)
+                                        (input) Input Value(s) Input - Input to enter the input value(s)
+                                    (column) Output Value(s)
+                                        (input) Output Value(s) Input - Input to enter the output value(s)
+                            (button) Add Button - Button to add a mapping
+                                (on-click)
+                                    Should add a mapping to [Field Mappings Grid].
+                            (button) Save Button - Button to save the mappings
+                                (on-click)
+                                    Should save the mappings to the eligibility field.
+                                    Should close [Editing Mappings Modal].
+                            (button) Cancel Button - Button to cancel the editing of the mappings
+                                (on-click)
+                                    Should close [Editing Mappings Modal].
+                (button) Add Button - Button to add the audit calcs
+                (button) Delete Button - Button to delete the audit calcs
+            (column) Delete
+                (button) Delete Button - Button to delete the eligibility field
+                    (on-click) 
+                        (modal) Removing Eligibility Field Confirmation Modal - Modal to confirm the deletion of the eligibility field
+                            (label) Removing Eligibility Field Confirmation Label - Label to confirm the deletion of the eligibility field
+                            (button) Remove Field Button - Button to delete the eligibility field
+                                (on-click)
+                                    Should remove the eligibility field from [Eligibility Fields Grid].
+                                    Should close [Removing Eligibility Field Confirmation Modal].
+                            (button) Cancel Button - Button to cancel the deletion of the eligibility field
+                                (on-click)
+                                    Should close [Removing Eligibility Field Confirmation Modal].
+(tab) Writeback Tab - Tab to display the writeback fields

@@ -1,0 +1,78 @@
+(tab) FANNIE MAE Tab
+    (container) Ratesheet Settings Container
+        (input) Username Input - Input to set the username for the Fannie MAE seller.
+        (input) Password Input - Input to set the password for the Fannie MAE seller.
+        (input) Seller Number Input - Input to set the seller number for the Fannie MAE seller.
+        (dropdown) Remittance Type Dropdown - Dropdown to set the remittance type for the Fannie MAE seller.
+        (container) Delivery Periods Container - Container to set the delivery periods for the Fannie MAE seller.
+            (list) Delivery Periods List - List to set the delivery periods for the Fannie MAE seller.
+                (row-definition)
+                    (label) Delivery Period Days Label - Label to set the delivery period days for the Fannie MAE seller.
+                    (button) Delete Delivery Period Button - Button to delete the delivery period for the Fannie MAE seller.
+            (input) Add Delivery Period Input - Input to add a delivery period for the Fannie MAE seller.
+            (button) Add Delivery Period Button - Button to add a delivery period for the Fannie MAE seller.
+                (on-click)
+                    Should add the delivery period to the [Delivery Periods List]
+        (button) Save Ratesheet Settings Button - Button to save the ratesheet settings for the Fannie MAE seller.
+            (on-click)
+                Should save the ratesheet settings for the Fannie MAE seller.
+(tab) FANNIE MAE SMP Tab
+    (container) Servicing Buyer Configuration Container
+        (grid) Servicing Buyer Configuration Grid
+            (column-definitions)
+                (column) Servicing Buyer
+                    (label) Servicing Buyer Label - Label to set the servicing buyer for the Fannie MAE seller.
+                (column) Fannie MAE SMP Servicer ID
+                    (input) Fannie MAE SMP Servicer ID Input - Input to set the servicing buyer for the Fannie MAE seller.
+    (button) Save Fannie MAE SMP Button - Button to save the servicing buyer configuration for the Fannie MAE seller.
+        (on-click)
+            Should save the servicing buyer configuration for the Fannie MAE seller.
+(tab) FREDDIE MAC RETAINED Tab
+    (container) Freddie Mac Retained Ratesheet Settings Container
+        (input) Seller Servicer Number Input - Input to set the servicer number for the Freddie Mac Retained seller.
+        (dropdown) Servicing Fee Dropdown - Dropdown to set the servicing fee for the Freddie Mac Retained seller.
+        (input) Master Commitment Number Input - Input to set the master commitment number for the Freddie Mac Retained seller.
+        (container) Delivery Periods Container - Container to set the delivery periods for the Freddie Mac Retained seller.
+            (list) Delivery Periods List - List to set the delivery periods for the Fannie MAE seller.
+                (row-definition)
+                    (label) Delivery Period Days Label - Label to set the delivery period days for the Fannie MAE seller.
+                    (button) Delete Delivery Period Button - Button to delete the delivery period for the Fannie MAE seller.
+            (input) Add Delivery Period Input - Input to add a delivery period for the Fannie MAE seller.
+            (button) Add Delivery Period Button - Button to add a delivery period for the Fannie MAE seller.
+                (on-click)
+                    Should add the delivery period to the [Delivery Periods List]
+    (button) Save Freddie Mac Retained Button - Button to save the ratesheet settings for the Freddie Mac Retained seller.
+        (on-click)
+            Should save the ratesheet settings for the Freddie Mac Retained seller.
+(tab) FREDDIE MAC RELEASED Tab
+    (container) Freddie Mac Released Ratesheet Settings Container
+        (input) Seller Servicer Number - Input to set the servicer number for the Freddie Mac Released seller.
+        (dropdown) Servicing Fee - Dropdown to set the servicing fee for the Freddie Mac Released seller.
+        (input) Master Commitment Number - Input to set the master commitment number for the Freddie Mac Released seller.
+        (dropdown) Escrow / Coverage - Dropdown to set the escrow / coverage for the Freddie Mac Released seller.
+        (dropdown) State - Dropdown to set the state for the Freddie Mac Released seller.
+        (input) Loan Amount - Input to set the loan amount for the Freddie Mac Released seller.
+        (container) Delivery Periods Container - Container to set the delivery periods for the Freddie Mac Released seller.
+            (list) Delivery Periods List - List to set the delivery periods for the Fannie MAE seller.
+                (row-definition)
+                    (label) Delivery Period Days Label - Label to set the delivery period days for the Fannie MAE seller.
+                    (button) Delete Delivery Period Button - Button to delete the delivery period for the Fannie MAE seller.
+            (input) Add Delivery Period Input - Input to add a delivery period for the Fannie MAE seller.
+            (button) Add Delivery Period Button - Button to add a delivery period for the Fannie MAE seller.
+                (on-click)
+                    Should add the delivery period to the [Delivery Periods List]
+    (button) Save Freddie Mac Released Button - Button to save the ratesheet settings for the Freddie Mac Released seller.
+        (on-click)
+            Should save the ratesheet settings for the Freddie Mac Released seller.
+(tab) FREDDIE MAC CTOS Tab
+    (container) Freddie Mac CTOS Ratesheet Settings Container
+        (container) Servicing Buyer Configuration Container
+        (grid) Servicing Buyer Configuration Grid
+            (column-definitions)
+                (column) Servicing Buyer
+                    (label) Servicing Buyer Label - Label to set the servicing buyer for the Fannie MAE seller.
+                (column) Fannie MAE SMP Servicer ID
+                    (input) Fannie MAE SMP Servicer ID Input - Input to set the servicing buyer for the Fannie MAE seller.
+        (button) Save Freddie Mac CTOS Button - Button to save the servicing buyer configuration for the Freddie Mac CTOS seller.
+            (on-click)
+                Should save the servicing buyer configuration for the Freddie Mac CTOS seller.

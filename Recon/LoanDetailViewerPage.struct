@@ -1,0 +1,10 @@
+(input) Loan Search Input - Input to filter loans
+  (on-change)
+    Updates the [Loans Grid] to filter loans by {Borrower Name, Loan Number}
+(button) Search Button - Button to search for loans
+(tab) Transformed Values Tab 
+  (grid) Loans Grid - Dispays transformed values for list of loans.
+    (row-definition) 
+      (link) Loan Number Link - Link to view loan details
+(tab) Raw Loan Values Tab 
+  (grid) Loans Grid - Displays list of loans.

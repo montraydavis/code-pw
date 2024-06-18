@@ -1,0 +1,95 @@
+(input) Search Clients Input - Input to search the clients.
+    (on-change)
+        Should [Fetch Clients].
+        Should filter [Clients Grid] based on the search input.
+(button) Add New Client Button - Button to add a new client.
+    (modal) Add New Client Confirmation Modal - Modal to add a new client.
+        (button) Close Button - Closes the modal.
+            (on-click)
+                Closes the modal.
+        (dropdown) Client Name Dropdown - Dropdown to select the client name.
+        (input) Acronym Input - Input to set the client acronym.
+        (input) CP Client ID Input - Input to set the client CP Client ID.
+        (input) Global ID Input - Input to set the client Global ID.
+        (input) Database Server Input - Input to set the database server.
+        (input) Database Name Input - Input to set the database name.
+        (button) Connect To Database Button - Button to connect to the database.
+        (button) Cancel Button - Button to cancel the action.
+            (on-click)
+                Closes the modal.
+(grid) Clients Grid - Grid to display the clients.
+    (column-definitions)
+        (column) Client Name - Column to display the client name.
+            (label) Client Name Label
+        (column) Client Type - Column to display the client type.
+            (label) Client Type Label
+        (column) Analyst Assigned - Column to display the analyst assigned to the client.
+            (label) Analyst Assigned Label
+        (column) Acronym - Column to display the client acronym.
+            (label) Acronym Label
+        (column) CP Client ID - Column to display the client CP Client ID.
+            (label) CP Client ID Label
+        (column) Global ID - Column to display the client Global ID.
+            (label) Global ID Label
+        (column) Database Server - Column to display the database server.
+            (label) Database Server Label
+        (column) Database Name - Column to display the database name.
+            (label) Database Name Label
+        (column) CP File - Column to display the CP file.
+            (label) CP File Label
+        (column) Edit - Column to display the edit button.
+            (button) Edit Button - Button to edit the client.
+                (on-click)
+                    (modal) Edit Client Modal - Modal to edit the client.
+                        (button) Close Button - Closes the modal.
+                            (on-click)
+                                Closes the modal.
+                        (input) Client Name Input - Input to change the client name.
+                        (input) Acronym Input - Input to change the client acronym.
+                        (input) CP Client ID Input - Input to change the client CP Client ID.
+                        (input) Global ID Input - Input to change the client Global ID.
+                        (dropdown) Client Type Dropdown - Dropdown to change the client type.
+                            (options)
+                                (option) Full Service
+                                (option) Hybrid-Loan Tables
+                                (option) Self Service
+                                (option) Other
+                        (input) Database Server Input - Input to change the database server.
+                        (input) Database Name Input - Input to change the database name.
+                        (button) Connect To Database Button - Button to connect to the database.
+                            (on-click)
+                                Connects to the database.
+                                Should [Fetch CP Files].
+                        (dropdown) CP File Dropdown - Dropdown to change the CP file.
+                        (dropdown) Team Assigned Dropdown - Dropdown to change the team assigned to the client.
+                        (input) Go Live Date Input - Input to change the go live date.
+                    (button) Save Client Button - Button to save the changes made to the client.
+                        (on-click)
+                            Saves the changes made to the client.
+                            Closes the modal.
+                    (button) Cancel Button - Button to cancel the action.
+                        (on-click)
+                            Closes the modal.
+        (column) Users - Column to display the users.
+            (button) Users Button - Button to manage the users.
+                (on-click)
+                    (modal) User Management Modal - Modal to manage the users.
+                        (button) Close Button
+                        (grid) Users Grid - Grid to display the users.
+                            (column-definitions)
+                                (column) User - Column to display the user.
+                                    (label) User Label
+                                (column) Name - Column to display the user name.
+                                    (label) Name Label
+                                (column) Role - Column to display the user role.
+                                    (dropdown) Role Dropdown - Dropdown to select the user role.
+                                        (options)
+                                            (option) Admin
+                                            (option) User
+                        (button) Save User Button - Button to save the changes made to any users.
+                            (on-click)
+                                Saves the changes made to any users.
+                                Closes the modal.
+                        (button) Cancel Button - Button to cancel the action.
+                            (on-click)
+                                Closes the modal.

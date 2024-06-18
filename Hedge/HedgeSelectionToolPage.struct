@@ -1,0 +1,307 @@
+(@on-signalr, @on-load)
+  (if) Job Status is 'REFRESHING RISK'
+    [Refresh Risk Job Running Banner, Refresh Risk Position Button, Projections Button, Trade Assistant Button, Clear Activity Dropdown] should be visible.
+  (else)
+    [Refresh Risk Job Running Banner, Refresh Risk Position Button, Projections Button, Trade Assistant Button, Clear Activity Dropdown] should NOT be visible.
+(toaster) Refresh Risk Job Status Toast - Toaster to display the status of the refresh risk job.
+  (label) Status Label - Displays the status of the refresh risk job.
+(banner) Refresh Risk Job Running Banner - Banner to display the status of the refresh risk job.
+  (label) Status Label - Displays the status of the refresh risk job.
+(label) Loans Refreshed Timestamp Label - Displays the timestamp of when the loans were last refreshed.
+(label) Last Position Refreshed Timestamp Label - Displays the timestamp of when the last position was last refreshed.
+(container) Instruments Container - Container to display the instruments.
+  (container) Actions Container - Container to display actions user can take.
+    (button) Expand All Button - Button to expand all instruments.
+      (on-click) Expands all instruments.
+    (link) Collapse All Link - Link to collapse all instruments.
+      (on-click) Collapses all instruments.
+    (button) Refresh Risk Position Button - Button to refresh the risk position.
+      (on-click) Refreshes the risk position.
+        (modal) Refresh Risk Position Modal - Modal to confirm the refresh of the risk position.
+          (label) Refresh Risk Position Confirmation Message Label - Displays the confirmation message.
+          (button) Modal Close Button - Button to close the modal.
+            (on-click) 
+              Closes the modal.
+              Updates the [Job Status Toast] to indicate that the job is running.
+              Updates the [Job Running Banner] to indicate that the job is running.
+          (button) Refresh Risk Position Confirmation Button - Button to confirm the refresh of the risk position.
+            (on-click)
+              Refreshes the risk position.
+              Closes the modal.
+          (button) Cancel Button - Button to cancel the modal.
+            (on-click) Closes the modal.
+    (button) Projections Button - Button to view the projections.
+      (on-click)
+        (modal) Projections Modal - Modal to view the projections.
+          (button) Close Button - Button to close the modal.
+            (on-click) Closes the modal.
+          (tab) Projected Locks Tab - Displays the projected locks.
+            (container) Projected Locks Details Container - Container to display the projected locks details.
+            (container) Projected Lock Summary Container - Container to display the projected lock summary.
+              (link) Expand All Link - Link to expand all instruments.
+                (on-click) Expands all instruments.
+              (link) Collapse All Link - Link to collapse all instruments.
+                (on-click) Collapses all instruments.
+              (grid) Projected Lock Summary Grid - Grid to display the projected lock summary.
+                (column-definitions)
+                  (column) Instrument
+                  (column) Q1 
+                  (column) Q2 
+                  (column) Q3 
+                  (column) Q4 
+                  (column) Total
+          (tab) Projected Fallout Tab - Displays the projected fallout.
+            (container) Projected Fallout Details Container - Container to display the projected fallout details.
+            (container) Projected Fallout Summary Container - Container to display the projected fallout summary.
+              (link) Expand All Link - Link to expand all instruments.
+                (on-click) Expands all instruments.
+              (link) Collapse All Link - Link to collapse all instruments.
+                (on-click) Collapses all instruments.
+              (grid) Projected Fallout Summary Grid - Grid to display the projected fallout summary.
+                (column-definitions)
+                  (column) Instrument
+                  (column) Q1 
+                  (column) Q2 
+                  (column) Q3 
+                  (column) Q4 
+                  (column) Total
+          (tab) Projected Loan Sales Tab - Displays the projected loan sales.
+            (container) Projected Loan Sales Type Container - Container to display the projected loan sales type.
+            (container) Loan Summary Container - Container to display the loan summary.
+              (link) Expand All Link - Link to expand all instruments.
+                (on-click) Expands all instruments.
+              (link) Collapse All Link - Link to collapse all instruments.
+                (on-click) Collapses all instruments.
+              (grid) Loan Summary Grid - Grid to display the loan summary.
+                (column-definitions)
+                  (column) Instrument
+                  (column) Q1 
+                  (column) Q2 
+                  (column) Q3 
+                  (column) Q4 
+                  (column) Total
+          (tab) Additional Projections Tab - Displays the additional projections.
+            (container) Additional Projections Details Container
+            (container) Additional Projections Summary Container
+              (link) Expand All Link - Link to expand all instruments.
+                (on-click) Expands all instruments.
+              (link) Collapse All Link - Link to collapse all instruments.
+                (on-click) Collapses all instruments.
+              (grid) Additional Projections Summary Grid - Grid to display the additional projections summary.
+                (column-definitions)
+                  (column) Instrument
+                  (column) Q1 
+                  (column) Q2 
+                  (column) Q3 
+                  (column) Q4 
+                  (column) Total
+          (tab) Total Projections Tab - Displays the total projections.
+            (container) Projection Summary Container - Container to display the projection summary.
+              (link) Expand All Link - Link to expand all instruments.
+                (on-click) Expands all instruments.
+              (link) Collapse All Link - Link to collapse all instruments.
+                (on-click) Collapses all instruments.
+              (grid) Projection Summary Grid - Grid to display the projection summary.
+                (column-definitions)
+                  (column) Instrument
+                  (column) Q1 
+                  (column) Q2 
+                  (column) Q3 
+                  (column) Q4 
+                  (column) Total
+            (button) Review Impact Button - Button to review the impact of the trade.
+              (on-click)
+                Closes the modal.
+            (button) Cancel Button - Button to cancel the trade.
+              (on-click)
+                Closes the modal.
+    (button) Trade Assistant Button - Button to view the trade assistant.
+    (dropdown) Clear Activity Dropdown - Dropdown to clear the activity.
+      (options)
+        (option) Clear Todays' Projections
+          (modal) Clear Todays' Projections Confirmation Modal - Modal to confirm the clearing of todays' projections.
+            (button) Close Button - Button to close the modal.
+              (on-click) 
+                Closes the modal.
+            (label) Clear Todays' Projections Confirmation Message Label - Displays the confirmation message.
+            (button) Clear Todays' Projections Confirmation Button - Button to confirm the clearing of todays' projections.
+              (on-click) 
+                Closes the modal.
+        (option) Clear Trades
+          (modal) Clear Trades Confirmation Modal - Modal to confirm the clearing of trades.
+            (button) Close Button - Button to close the modal.
+              (on-click) 
+                Closes the modal.
+            (label) Clear Trades Confirmation Message Label - Displays the confirmation message.
+            (button) Clear Trades Confirmation Button - Button to confirm the clearing of trades.
+              (on-click) 
+                Closes the modal.
+        (option) Clear All Activity
+          (modal) Clear All Activity Confirmation Modal - Modal to confirm the clearing of all activity.
+            (button) Close Button - Button to close the modal.
+              (on-click) 
+                Closes the modal.
+            (label) Clear All Activity Confirmation Message Label - Displays the confirmation message.
+            (button) Clear All Activity Confirmation Button - Button to confirm the clearing of all activity.
+              (on-click) 
+                Closes the modal.
+(container) Trade Blotter Container - Container to display the trade blotter.
+  (label) Last Refreshed Timestamp Label - Displays the timestamp of when the trade blotter was last refreshed.
+  (link) Broker/Dealer Usage Link - Link to view the broker/dealer usage.
+    (modal) Broker/Dealer Usage Modal - Modal to view the broker/dealer usage.
+      (button) Close Button - Button to close the modal.
+        (on-click) Closes the modal.
+      (grid) Broker/Dealer Usage Grid - Displays the broker/dealer usage.
+        (column-definitions)
+          (column) Broker
+            (label) Broker Label
+          (column) Total Line
+            (label) Total Line Label
+          (column) Used
+            (label) Used Label
+          (column) Percent Used
+            (label) Percent Used Label
+          (column) Available
+            (label) Available Label
+          (column) Current MTM
+            (label) Current MTM Label
+          (column) Posted Margin
+            (label) Posted Margin Label
+          (column) Margin Threshold
+            (label) Margin Threshold Label
+  (grid) Trade Blotter Grid - Displays the trade blotter.
+    (column-definitions)
+      (column) Select - Displays the select column.
+        (checkbox) Select Checkbox - Checkbox to select the trade.
+          (on-selected)
+            Updates the [Selected Trade Blotter Grid] to include the selected trade.
+          (on-unselected)
+            Updates the [Selected Trade Blotter Grid] to exclude the selected trade.
+      (column) Broker/Dealer
+        (label) Broker/Dealer Dropdown
+      (column) Contact
+        (label) Contact Input
+      (column) Instrument
+        (label) Instrument Label
+      (column) Settlement Date
+        (label) Settlement Date Label
+      (column) Price
+        (label) Price Input
+      (column) Trader
+        (label) Trader Label
+      (column) Notes
+        (input) Notes Input
+      (column) Actions      
+        (container)
+          (button) Propose Trade Button - Button to propose the trade.
+            (modal) Propose Trade Confirmation Modal - Modal to confirm the proposal of the trade.
+              (container) Trade Details Container - Container to display the trade details.
+                (label) Hedge Bucket - Displays the hedge bucket.
+                (label) Duration / Ratio - Displays the duration or ratio.
+                (label) TBA - Displays the TBA.
+                (label) Bid-Ask Spread - Displays the bid-ask spread.
+                (dropdown) Buy Type Dropdown - Dropdown to select the buy type.
+                (input) Buy Amount Input - Input to enter the buy amount.
+                (label) Notional Trade Amount Label - Displays the notional trade amount.
+                (label) Duration-Weighted Impact Label - Displays the duration-weighted impact.
+                (button) Review Impact Button - Button to review the impact of the trade.
+                (button) Cancel Button - Button to cancel the trade.
+              (tab) Usage Tab - Displays the usage.
+                (grid) Usage Grid - Grid to display the usage details.
+                  (column) Broker
+                  (column) Total Line
+                  (column) Used
+                  (column) Percent Used
+                  (column) Available
+                  (column) Current MTM
+                  (column) Posted Margin
+                  (column) Margin Threshold
+              (tab) Coverage Tab - Displays the coverage.
+                (grid) Coverage Grid - Grid to display the coverage details.
+                  (column-definitions)
+                    (column) Broker
+                    (column) Coverage Amount
+              (tab) Trades Tab - Displays the trades.
+                (dropdown) Broker/Dealers Dropdown - Dropdown to select the broker/dealers.
+                (grid) Trades Grid - Grid to display the trades.
+                  (column-definitions)
+                    (column) Trade ID  Original Trade Amount
+                    (column) Original Trade Amount
+                    (column) Residual Trade Amount
+                    (column) Trade Open Date
+                    (column) Current Gain/Loss
+                    (column) Broker/Dealer
+                    (column) Long/Short
+                (container) Net Totals Container - Container to display the net totals.
+                  (column-definitions)
+                    (label) Original Trade Amount Label - Displays the original trade amount. 
+                    (label) Residual Trade Amount Label - Displays the residual trade amount.
+          (button) Enter Trade Button - Button to enter the trade.
+            (modal) Enter Trade Confirmation Modal - Modal to confirm the addition of the trade.
+              (button) Close Button - Button to close the modal.
+                (on-click) Closes the modal.
+              (label) Enter Trade Confirmation Message Label - Displays the confirmation message.
+              (button) Add Trade Confirmation Button - Button to confirm the addition of the trade.
+                (on-click) Closes the modal.
+              (button) Cancel Button - Button to cancel the modal.
+                (on-click) Closes the modal.
+          (button) Delete Trade Button - Button to delete the trade.
+            (modal) Delete Trade Confirmation Modal - Modal to confirm the deletion of the trade.
+              (button) Close Button - Button to close the modal.
+                (on-click) Closes the modal.
+              (label) Delete Trade Confirmation Message Label - Displays the confirmation message.
+              (button) Delete Trade Button - Button to delete the trade.
+                (on-click) 
+                  Deletes the trade.
+                  Closes the modal.
+              (button) Cancel Button - Button to cancel the modal.
+                (on-click) Closes the modal.
+  (button) Update Selected Button - Button to update the selected trades.
+    (on-click)
+      (modal) Update Selected Confirmation Modal - Modal to confirm the update of the selected trades.
+        (button) Close Button - Button to close the modal.
+          (on-click) Closes the modal.
+        (label) Update Selected Confirmation Message Label
+        (button) Add Trade Button - Button to confirm the addition of the selected trades.
+          (on-click) Closes the modal.
+        (button) Cancel Button - Button to cancel the modal.
+          (on-click) Closes the modal.
+      (modal) Errors On Page Modal - Modal displayed when there are errors on the page.
+        (button) Close Button - Button to close the modal.
+          (on-click) Closes the modal.
+        (label) Errors On Page Confirmation Message Label 
+        (list) Errors List - List of errors on the page.
+          (row-definition)
+            (label) Error Label - Displays the error message.
+        (button) Ok Button - Button to close the modal.
+          (on-click) Closes the modal.
+  (button) Associate Trades Button - Button to associate the selected trades.
+    (on-click)
+      (modal) Associate Trades Confirmation Modal - Modal to confirm the association of the selected trades.
+        (button) Close Button - Button to close the modal.
+          (on-click) Closes the modal.
+        (list) Trade Associations List - List of trades to associate.
+          (row-definition)
+            (dropdown) Broker/Dealer Dropdown - Dropdown to select the broker/dealer.
+            (input) Proposed Amount Input - Input to enter the proposed amount.
+            (grid) Trades Grid - Displays the trades to associate.
+              (column-definitions)
+                (column) Trade ID
+                  (label) Trade ID Label
+                (column) Broker/Dealer
+                  (label) Broker/Dealer Label
+                (column) Trade Date
+                  (label) Trade Date Label
+                (column) Price
+                  (label) Price Label
+                (column) Gain/Loss
+                  (label) Gain/Loss Label
+                (column) Usable Trade Amount
+                  (label) Usable Trade Amount Label
+                (column) Associated Amount
+                  (input) Associated Amount Input
+            (label) Total Associations Amount Label - Displays the total sum of the associated amounts.
+            (label) Remaining Amount Label - Displays the remaining amount available to associate.
+        (button) Save Button - Button to save the association.
+          (on-click)
+            Closes the modal.

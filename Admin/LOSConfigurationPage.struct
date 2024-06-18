@@ -1,0 +1,53 @@
+(dropdown) LOS Connection Dropdown - Dropdown to select the LOS connection.
+(container) Authentication Settings Container - Container to display the authentication settings.
+    (input) LOS ID Input - Input to enter the LOS ID.
+    (input) LOS URL Input - Input to enter the LOS URL.
+    (dropdown) LOS Version Dropdown - Dropdown to select the LOS version.
+    (input) Username Input - Input to enter the username.
+    (input) Password Input - Input to enter the password.
+    (input) Confirm Password Input - Input to confirm the password.
+(container) CompassPoint Settings Container - Container to display the CompassPoint settings.
+    (checkbox) Enable RTR Checkbox - Checkbox to enable RTR.
+    (input) LOS Filter Input - Input to enter the LOS filter.
+    (button) Test Filter Button - Button to test the filter.
+        (on-click)
+            (modal) Test Filter Modal - Modal to display the test filter modal.
+                (button) Close Button - Button to close the modal.
+                    (on-click)
+                        Should close [Test Filter Modal].
+                (label) Filter Validation Label - Label to display the filter validation.
+                    (@on-load)
+                        (if) [LOS Filter Input] is valid regex.
+                            Should display [Filter Validation Label] with the text "Filter error encountered while testing".
+                        (else)
+                            Should display [Filter Validation Label] with the text "Expression is valid".
+                (button) Ok Button - Button to close the modal.
+                    (on-click)
+                        Should close [Test Filter Modal].
+    (input) Snapshot Table Name Input - Input to enter the snapshot table name.
+(container) Communication Settings Container - Container to display the communication settings.
+    (dropdown) Number Of Retries Dropdown - Dropdown to select the number of retries.
+    (dropdown) Retry Interval Dropdown - Dropdown to select the retry interval.
+    (dropdown) Save Kiab Wait Period Dropdown - Dropdown to select the save Kiab wait period.
+    (dropdown) Timeout Seconds Dropdown - Dropdown to select the timeout seconds.
+    (input) Emails Input - Input to enter the emails.
+(container) Pooling Writeback Container - Container to display the pooling writeback settings.
+    (checkbox) New Request Checkbox - Checkbox to enable new request.
+    (tooltip) New Request Tooltip - Tooltip to display the new request tooltip.
+    (info) New Request Info - Info to display the new request info.
+        (on-hover)
+            Should display [New Request Tooltip].
+        (on-mouseleave)
+            Should hide [New Request Tooltip].
+(container) Other Settings Container - Container to display the other settings.
+    (checkbox) Enable Check for LOS Updates Checkbox - Checkbox to enable check for LOS updates.
+    (input) LOS Update Open Timeout Input - Input to enter the LOS update open timeout.
+    (input) LOS Update Chase Timeout Input - Input to enter the LOS update chase timeout.
+    (input) Polling Interval Input - Input to enter the polling interval.
+    (input) LOS Polling Data Modified Field Input - Input to enter the LOS polling data modified field.
+    (checkbox) Snapshot Table In Use Checkbox - Checkbox to enable snapshot table in use.
+    (input) Snapshot Last Updated Input - Input to enter the snapshot last updated.
+    (checkbox) Retry Save Loans in Process Checkbox - Checkbox to enable retry save loans in process.
+    (input) Last Retry Save Loans in Process Input - Input to enter the last retry save loans in process.
+(button) Save Confirmation Button - Button to save the changes made to the LOS configuration.
+(button) Cancel Button - Button to cancel the action.

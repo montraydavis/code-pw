@@ -1,0 +1,54 @@
+(container) Loan Details Container    
+    (label) Product Code Label
+    (label) Channel Label
+    (label) Loan Amount Label
+    (label) Property Occupancy Label
+    (label) Note Rate Percent Label
+    (label) Property Type Label
+    (label) Loan Purpose Label
+    (label) Property Units Label
+    (label) Current Stage Label
+    (label) Property State Label
+    (label) FICO Score Label
+    (label) Refinance Type Label
+    (label) LTV Ratio Label
+    (label) Loan Status Label
+    (label) CLTV Ratio Label
+(container) Supplement Data Container
+    (label) Lock Date Label
+    (label) Lender Acquisition Cost Label
+    (label) Lock Expiration Date Label
+    (label) Lender Profit Margin Label
+    (label) Estimated Fund Date Label
+    (label) Secondary Cost Label
+    (label) Loan Funded Date Label
+    (label) Allocation Date Label
+    (label) Purchased Date Label
+    (label) Shipped to Investor Date Label
+    (label) Pool/Commitment Number Label
+(tab) Pricing Details Tab
+    (container) Best Executions Ranking Container
+        (grid) Best Executions Grid
+            (column-definitions)
+                (column) Rank
+                (column) Price
+                (column) Spread to BestEx
+                (column) Execution
+                (column) Coupon
+    (container) Best Execution Detail Container
+    (container) BUYUP/BUYDOWN Container
+(tab) Status Tab
+(tab) Coverage Tab
+(tab) Shocks Tab
+(tab) Unpriced Investors Tab
+(tab) Margin Details Tab
+
+
+
+
+
+
+
+
+
+

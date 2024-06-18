@@ -1,0 +1,82 @@
+(input) Search Groups Input - Input to search the groups.
+    (on-change)
+        Should [Fetch Groups].
+        Should filter [Groups Grid] based on the search input.
+(button) Create New Group Button
+    (modal) Create New Group Confirmation Modal - Modal to create a new Group.
+        (button) Close Button - Closes the modal.
+            (on-click)
+                Closes [Create New Group Confirmation Modal].
+        (dropdown) Group Name Dropdown - Dropdown to select the Group name.
+        (input) Acronym Input - Input to set the Group acronym.
+        (input) CP Group ID Input - Input to set the Group CP Group ID.
+        (input) Global ID Input - Input to set the Group Global ID.
+        (input) Database Server Input - Input to set the database server.
+        (input) Database Name Input - Input to set the database name.
+        (button) Connect To Database Button - Button to connect to the database.
+        (button) Cancel Button - Closes the modal.
+(grid) Groups Grid - Grid to display the Groups.
+    (column-definitions)
+        (column) Group Name - Column to display the Group name.
+            (label) Group Name Label
+        (column) Group Type - Column to display the Group type.
+            (label) Group Type Label
+        (column) Analyst Assigned - Column to display the analyst assigned to the Group.
+            (label) Analyst Assigned Label
+        (column) Acronym - Column to display the Group acronym.
+            (label) Acronym Label
+        (column) CP Group ID - Column to display the Group CP Group ID.
+            (label) CP Group ID Label
+        (column) Global ID - Column to display the Group Global ID.
+            (label) Global ID Label
+        (column) Database Server - Column to display the database server.
+            (label) Database Server Label
+        (column) Database Name - Column to display the database name.
+            (label) Database Name Label
+        (column) CP File - Column to display the CP file.
+            (label) CP File Label
+        (column) Edit - Column to display the edit button.
+            (button) Edit Button - Button to edit the Group.
+                (on-click)
+                    (modal) Edit Group Modal - Modal to edit the Group.
+                        (button) Close Button - Closes the modal.
+                            (on-click)
+                                Closes [Edit Group Modal].
+                        (input) Group Name Input - Input to change the Group name.
+                        (container) Included/Excluded Container - Container to display the included and excluded clients.
+                            (container) Excluded Container - Container to display the excluded clients.
+                                (list) Excluded Clients List - List to display the excluded clients.
+                                    (row-definition) 
+                                        (label) Client Name Label
+                            (container) Actions Buttons Container - Container to display the actions buttons.
+                                (button) Add Button - Button to add the selected clients to the included list.
+                                    (on-click) 
+                                        Should add the selected clients to the [Included Clients List].
+                                        Should remove the selected clients from the [Excluded Clients List].
+                                (button) Add All Button - Button to add all clients to the included list.
+                                    (on-click) 
+                                        Should add all clients to the [Included Clients List].
+                                        Should remove all clients from the [Excluded Clients List].
+                                (button) Remove Button - Button to remove the selected clients from the included list.
+                                    (on-click) 
+                                        Should remove the selected clients from the [Included Clients List].
+                                        Should add the selected clients to the [Excluded Clients List].
+                                (button) Remove All Button - Button to remove all clients from the included list.
+                                    (on-click) 
+                                        Should remove all clients from the [Included Clients List].
+                                        Should add all clients to the [Excluded Clients List].
+                            (container) Included Container - Container to display the included clients.
+                                (list) Included Clients List - List to display the included clients.
+                                    (row-definition) 
+                                        (label) Client Name Label
+                        (button) Save Group Button - Button to save the changes made to the Group.
+                            (on-click)
+                                Saves the changes made to the Group.
+                            Closes [Edit Group Modal].
+                        (button) Cancel Button - Closes the modal.
+                            (on-click)
+                                Closes [Edit Group Modal].
+            
+
+
+

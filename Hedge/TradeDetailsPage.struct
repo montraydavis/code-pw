@@ -1,0 +1,45 @@
+(link) Back to Trade Management Link - Link to navigate to the Trade Management page.
+  (on-click) Navigates back to the Trade Management page.
+(button) Delete Trade Button - Button to delete the trade.
+  (on-click) Prompts user to confirm deletion of the trade.
+(modal) Delete Trade Modal - Modal to confirm deletion of the trade.
+  (button) Modal Close Button - Button to close the modal.
+    (on-click) Closes the modal.
+  (label) Modal Confirmation Message Label - Displays confirmation message.
+  (button) Delete Trade Button - Button to delete the trade.
+    (on-click)
+      Deletes the trade.
+      Closes the modal.
+      Navigates back to the Trade Management page.
+  (button) Cancel Button - Button to cancel the deletion of the trade.
+    (on-click) Closes the modal.
+(component) MBS Details Container - Displays details of the trade.
+  (label) Trade ID Label - Displays the trade ID.
+  (label) Trade Amount Label - Displays the trade amount.
+  (label) Residual Amount Label - Displays the residual amount.
+  (dropdown) Security Type Dropdown - Displays the security type.
+  (input) Trade Date Input - Displays the trade date.
+  (input) Trade Price Input - Displays the trade price.
+  (input) Settlement Date Input - Displays the settlement date.
+  (input) Broker/Dealer Input - Displays the broker/dealer.
+  (label) Trade Name Label - Displays the trade name.
+  (radio) Long/Short Radio - Selects the trade position (long or short).
+    (options)
+      (option) Buy/Long
+      (option) Sell/Short
+  (component) Transactions Container - Displays a list of transactions associated to the trade.
+    (list) Transactions List - Displays a list of transactions associated to the trade.
+      (row-definition)
+        (label) Transaction ID Label - Displays the transaction ID.
+        (input) Amount Used Input - Displays the amount used.
+        (input) Transaction Price Input - Displays the transaction price.
+        (input) Transaction Date Input - Displays the transaction date.
+        (input) Broker/Dealer Input - Displays the broker/dealer.
+        (label) Trade Name Label - Displays the trade name.
+        (button) Delete Transaction Button - Button to delete the transaction.
+          (on-click) Prompts user to confirm deletion of the transaction.
+
+(button) Save Button - Button to save the trade.
+  (on-click) Saves the trade.
+(button) Cancel Button - Button to cancel the trade.
+  (on-click) Closes the modal.

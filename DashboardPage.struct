@@ -1,0 +1,133 @@
+(container) Position Pipeline Container
+  (link) Position Pipeline Link
+    (on-click)
+      Navigates to [Hedge Selection Tool Page]
+  (label) Net Position Amount Label
+  (label) Loan Pipeline Amount Label
+(container) Market Movement Container
+  (label) Market Delta - RS Label
+  (label) Market Delta - Today Label
+(container) Loans Available for Sale Container
+  (link) Loans Available for Sale Link
+    (on-click)
+      Navigates to [Request Bids Page]
+  (label) Loans Amount Label
+  (label) Total UPB Amount Label
+(container) Latest Bid Request Container
+  (label) Bids Received Date Label
+  (label) Loans with Bids Count Label
+  (label) Bids Due Date Label
+  (link) Latest Bid Request Link
+    (on-click) 
+      Navigates to [Commit Loans Page]
+(container) Shock Profile Container
+  (tab) Gain/Loss Tab
+    (chart) Gain/Loss Chart
+  (tab) Position Tab
+    (chart) Position Chart
+  (tab) Shock Data Tab
+    (grid) Shock Data Grid
+      (column-definitions)
+        (column) Rate Shock
+        (column) Price
+        (column) Change 32nds
+        (column) Unclosed CP%
+        (column) Unclosed Hedge Cover%
+        (column) HW Loan Amount
+        (column) HW Hedge Amount
+        (column) Net
+        (column) DV01 Ratio
+        (column) DV01wtd MSR
+        (column) Unclosed Hedge w/ MSRCv%
+        (column) Net Pipe w/ MSR
+        (column) Pipe Loan Gain/LossHedge Gain/Loss
+        (column) MSR Gain/Loss
+        (column) Consolidated Gain/Loss
+(container) Month to Date Snapshot Container
+  (tab) Gain/Loss Tab
+    (dropdown) Type 
+      (options)
+        (option) BPS
+        (optional) Notional    (chart) Gain/Loss Chart
+    (line-chart) Gain/Loss Chart
+  (tab) Locks/Coverage Tab
+    (line-and-bar-chart) Locks/Coverage Chart
+  (tab) Base Instrument Tab
+    (line-chart) Base Instrument Chart
+  (tab) Position Tab
+    (line-chart) Position Chart
+(container) Locks Container
+  (dropdown) Locks Dropdown
+    (button) Close Button
+      (on-click) Closes the [Locks Dropdown]
+    (options)
+      (option) Select All
+      (option) Conv 30
+      (option) Conv 15
+      (option) Gov 30
+      (option) Other
+  (chart) Locks Chart
+(container) Fallout Container
+  (label) Fallout Amount Label
+  (chart) Fallout Chart
+(container) Loan Sales Summary Container
+  (dropdown) Product Type Dropdown
+    (options)
+      (option) Conv30
+      (option) Conv 15
+      (option) Gov 30
+  (dropdown) Days Dropdown
+    (options)
+      (option) 30
+      (option) 60
+      (option) 90
+      (option) 120
+  (chart) Loan Sales Summary Chart
+(container) Loan Sales (Rolling in 30 Days) Container
+  (grid) Loan Sales (Rolling in 30 Days) Grid
+    (column-definitions)
+      (column) Agency Label
+      (column) Lender
+        (sub-column) Conv 
+        (sub-column) Govt
+      (column) Cohort
+        (sub-column) Conv 
+        (sub-column) Govt
+  (container) Top Investors Container
+    (grid) Top Five Lenders Grid
+      (column-definitions)
+      (column) Investor
+      (column) Amount (M)
+      (column) Percent
+    (grid) Cohort Top Five Investors Grid
+      (column-definitions)
+        (column) Investor
+        (column) Amount (M)
+        (column) Percent
+(container) Recent Trades Container
+  (link) Recent Trades Link
+    (on-click)
+      Navigates to [Trade Management Page]
+  (grid) Recent Trades Grid
+    (column-definitions)
+      (column) Security ID
+      (column) Buy/Sell
+      (column) Coupon
+      (column) Broker/Dealer
+      (column) Trade Date
+      (column) Trade Price
+      (column) Amount (M)
+(container) Lock Volume Container
+  (grid) Lock Volume Grid
+    (column-definitions)
+      (column) Type
+      (column) Day Overy Day
+      (column) Month to Date
+      (column) Last 45 Days
+  (grid) Channel Grid
+    (column-definitions)
+      (column) Channel Status
+      (column) Locks (M)
+      (column) Change (M)
+      (column) Nargin (BPS)
+      (column) Change (BPS)      

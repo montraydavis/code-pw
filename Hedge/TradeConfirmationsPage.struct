@@ -1,0 +1,156 @@
+(tab) Blind Confirms Tab
+  (button) Browse Files Button
+  (button) Upload Selected Files Button
+  (file-input) Upload Files Input
+    (on-change)
+      Updates the [Uploaded Confirms Grid] to include the selected file.
+      (if) The confirmation file count is greater than 0
+        Enable [Upload Selected Files Button]
+        Display [Uploaded Confirms Grid]
+      (else)
+        Disable [Upload Selected Files Button]
+        Hide [Uploaded Confirms Grid]
+    (grid) Uploaded Confirms Grid - Displays the uploaded confirms.
+      (column-definitions)
+        (column) File Name
+          (label) File Name Label - Displays the file name.
+        (column) Confirms Included
+          (label) Confirms Included Label - Dropdown to select the number of confirms included.
+        (column) Confirm Name
+          (input) Confirm Name Input - Input to set the confirm name.
+        (column) Actions
+          (button) Delete Button - Button to delete the confirm.
+            (on-click)
+              Deletes the confirm.
+  (container) Available Confirms for Matching Container
+    (grid) Trade Confirms Grid - Displays the trade confirms.
+      (column-definitions)
+        (column) Confirm Name
+          (label) Confirm Name Label - Displays the confirm name.
+        (column) Date Uploaded
+          (label) Date Uploaded Label - Displays the date uploaded.
+        (column) Confirmed Trades
+          (label) Confirmed Trades Label - Displays the confirmed trades.
+        (column) Actions
+          (button) Select Button - Button to select the trade confirm.
+            (on-click)
+              (modal) Select Confirmation Modal - Modal to confirm the selection of a trade confirm.
+                (button) Close Button - Button to close the modal.
+                  (on-click) Closes the modal.
+                (dropdown) Broker/Dealer Dropdown - Dropdown to select the broker/dealer.
+                (dropdown) Buy/Sell Dropdown - Dropdown to select the buy/sell.
+                (dropdown) Instrument Dropdown - Dropdown to select the instrument.
+                (input) Trade Date Input - Input to enter the trade date.
+                (input) Settlement Date Input - Input to enter the settlement date.
+                (input) Trade Amount Input - Input to enter the trade amount.
+                (input) Price Input - Input to enter the price.
+                (button) Search Button - Button to search for the trade confirm.
+                  (on-click)
+                    Searches for the [Trade Confirm PDF Viewer] that matches the criteria.
+                    (if) The [Trade Confirm PDF Viewer] is found
+                      Displays the [Trade Confirm PDF Viewer] in the [Document Viewer] container.
+                    (else)
+                      Displays a message that the [Trade Confirm PDF Viewer] was not found.
+                (container) Document Viewer - Displays PDF view of the trade confirm.
+                  (pdf-viewer) Trade Confirm PDF Viewer - Displays the trade confirm.
+          (button) Delete Button
+            (on-click)
+              (modal) Delete Confirmation Modal - Modal to confirm the deletion of a trade confirm.
+                (button) Close Button - Button to close the modal.
+                  (on-click) Closes the modal.
+                (label) Confirm Delete Message Label - Displays the confirmation message.
+                (button) Confirm Delete Button - Button to confirm the deletion.
+                  (on-click)
+                    Deletes the selected trade confirm.
+                    Closes the modal.
+                (button) Cancel Button - Button to cancel the deletion.
+                  (on-click) Closes the modal.
+(tab) Verbal Confirms Tab
+  (grid) Verbal Confirms Grid - Displays the verbal confirms.
+    (column-definitions)
+      (column) Trade ID
+      (column) Transaction ID
+      (column) Long/Short
+      (column) Instrument
+      (column) Trade Date
+      (column) Settlement Date
+      (column) Trade Amount
+      (column) Trade Price
+      (column) Broker/Dealer
+      (column) Confirm Now
+        (button) Confirm Now Button - Button to confirm the trade.
+          (on-click)
+            (modal) Confirm Confirmation Modal - Modal to confirm the trade.
+              (button) Close Button - Button to close the modal.
+                (on-click) Closes the modal.
+              (container) Details Container
+                (label) ID - Displays the row ID.
+                (label) Trade ID Label - Displays the trade ID.
+                (label) Transaction ID Label - Displays the transaction ID.
+                (label) Long/Short Label - Displays the long/short.
+                (label) Trade Date Label - Displays the trade date.
+                (label) Settlement Date Label - Displays the settlement date.
+                (label) Original Trade Amount Label - Displays the original trade amount.
+                (label) Trade Price Label - Displays the trade price.
+                (label) Broker/Dealer Label - Displays the broker/dealer.
+              (button) Confirm Button - Button to confirm the trade.
+                (on-click) Closes the modal.
+              (button) Cancel Button - Button to cancel the modal.
+                (on-click) Closes the modal.
+(tab) Unconfirmed Trades/Transactions Tab
+  (grid) Unconfirmed Trades/Transactions Grid - Displays the unconfirmed trades/transactions.
+    (column-definitions)
+      (column) Trade Details
+        (sub-column) Trade ID
+          (label) Trade ID Label - Displays the trade ID.
+        (sub-column) Transaction ID
+          (label) Transaction ID Label - Displays the transaction ID.
+        (sub-column) Instrument
+          (label) Instrument Label - Displays the instrument.
+        (sub-column) Trade Amount
+          (label) Trade Amount Label - Displays the trade amount.
+        (sub-column) Long/Short
+          (label) Long/Short Label - Displays the long/short.
+      (column) Dealer
+        (sub-column) Broker/Dealer
+          (label) Broker/Dealer Label - Displays the broker/dealer.
+      (column) Dates
+        (sub-column) Trade Date
+          (label) Trade Date Label - Displays the trade date.
+        (sub-column) Settlement Date
+          (label) Settlement Date Label - Displays the settlement date.
+      (column) Trade
+        (sub-column) Trade Price
+          (label) Trade Price Label - Displays the trade price.
+        (sub-column) Trader
+          (label) Trader Label - Displays the trader.
+(dropdown) Trade Type Dropdown
+(dropdown) Investor
+(dropdown) Commitment Amount
+(dropdown) Price
+(dropdown) Notes
+(input) Commitment ID Input
+(input) Expiration Date Input
+(container) Loans Container
+  (grid) Loans Grid - Displays the loans.
+    (column-definitions)
+      (column) Index
+        (label) Index Label - Displays the index.
+      (column) Loan ID
+        (label) Loan ID Label - Displays the loan ID.
+      (column) Price
+        (label) Price Label - Displays the price.
+(button) Create Button
+  (on-click)
+    (modal) Create Loan Confirmation Modal - Modal to confirm the creation of a loan.
+      (button) Close Button - Button to close the modal.
+        (on-click) 
+          Closes the modal.
+      (label) Create Loan Confirmation Message Label - Displays the confirmation message.
+      (button) Create Loan Button - Button to create the loan.
+        (on-click) 
+          Closes the modal.
+      (button) Cancel Button - Button to cancel the modal.
+        (on-click) 
+          Closes the modal.
+(button) Cancel Button

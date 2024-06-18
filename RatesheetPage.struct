@@ -1,0 +1,119 @@
+(@on-load)
+    (if) Client has an existing ratesheet
+        Should display [Ratesheet Details Container].
+    (else)
+        Should display [New Ratesheet Details Container].
+(container) New Ratesheet Details Container - Container to display the new ratesheet details
+    (label) Last Created Label - Label to display the last created ratesheet
+    (label) TBA Price Label - Label to display the TBA price
+    (label) Price Difference Label - Label to display the price difference
+    (label) New Locks as of Published Ratesheet (UPB/Count) Label
+    (label) Current TBA Price Label - Label to display the current TBA price
+    (label) Last Ratesheet Posted By Label - Label to display the last ratesheet posted by
+    (label) Best Efforts Label - Label to display the best efforts
+    (label) Cash Label - Label to display the cash
+    (label) Bulk Label - Label to display the bulk
+    (label) MBS Label - Label to display the MBS
+    (button) Create New Ratesheet Button - Button to create a new ratesheet
+        (on-click)
+            (modal) Create New Ratesheet Confirmation Modal - Modal to confirm the creation of a new ratesheet
+                (label) Create New Ratesheet Confirmation Label - Label to display the create new ratesheet confirmation
+                (button) Create New Ratesheet Button - Button to create a new ratesheet
+                    (on-click)
+                        Should close [Create New Ratesheet Confirmation Modal].
+                        Should run [Create New Ratesheet] job.
+(container) Ratesheet Details Container - Container to display the ratesheet details
+    (link) Ratehseet Settings Link - Link to navigate to the ratesheet settings
+        (on-click)
+            (modal) Ratesheet Settings Modal - Modal to display the ratesheet settings
+                (button) Close Button - Button to close the modal
+                    (on-click)
+                        Should close [Ratesheet Settings Modal].
+                (dropdown) Price Source Dropdown - Dropdown to select the price source
+                (dropdown) Rounding Increment Dropdown - Dropdown to select the rounding increment
+                (dropdown) Direction Dropdown - Dropdown to select the direction
+                (button) Save Ratehseet Settings Button - Button to save the ratesheet settings
+                    (on-click)
+                        Should close [Ratesheet Settings Modal].
+                        Should save [Ratesheet Settings].
+                (button) Cancel Button - Button to cancel the modal
+                    (on-click)
+                        Should close [Ratesheet Settings Modal].
+    (label) Effective Date Label - Label to display the effective date
+    (dropdown) Former Date Dropdown - Dropdown to select the former date
+    (label) Benchmark Label - Label to display the benchmark
+    (label) Benchmark Change Label - Label to display the benchmark change
+    (label) Last Ratesheet Posted By Label - Label to display the last ratesheet posted by
+(container) Audits Container - Container to display the audits
+    (input) Exception Tolerance Input - Input to enter the exception tolerance
+    (input) Rank 2 Differential Input - Input to enter the rank 2 differential
+    (input) Changed Investor - Input to enter the changed investor
+    (input) Failed Pricing - Input to enter the failed pricing
+    (input) Inverted Price - Input to enter the inverted price
+    (input) Lock Period Exception - Input to enter the lock period exception
+    (input) New Pricing - Input to enter the new pricing
+    (input) Price Exceptions - Input to enter the price exceptions
+    (input) No Rank 2 - Input to enter the no rank 2
+    (input) Rank 2 Differential - Input to enter the rank 2 differential
+    (input) Coupon Change - Input to enter the coupon change
+(container) Ratesheet Conciliation Container - Container to display the ratesheet conciliation
+    (grid) Ratesheet Conciliation Grid - Grid to display the ratesheet conciliation
+        (column-definitions)
+            (column) Channel
+                (label) Channel Label - Label to display the channel
+            (column) Product
+                (label) Product Label - Label to display the product
+            (column) Rate
+                (label) Rate Label - Label to display the rate
+            (column) 15
+                (input) Amount Input - Input to enter the amount
+                (link) Loan Details Link - Link to navigate to the loan details
+                    (on-click)
+                        Should navigate to [Loan Details Page]
+            (column) 30
+                (input) Amount Input - Input to enter the amount
+                (link) Loan Details Link - Link to navigate to the loan details
+                    (on-click)
+                        Should navigate to [Loan Details Page]
+            (column) 45
+                (input) Amount Input - Input to enter the amount
+                (link) Loan Details Link - Link to navigate to the loan details
+                    (on-click)
+                        Should navigate to [Loan Details Page]
+            (column) 60
+                (input) Amount Input - Input to enter the amount
+                (link) Loan Details Link - Link to navigate to the loan details
+                    (on-click)
+                        Should navigate to [Loan Details Page]
+            (column) 90
+                (input) Amount Input - Input to enter the amount
+                (link) Loan Details Link - Link to navigate to the loan details
+                    (on-click)
+                        Should navigate to [Loan Details Page]
+            (column) Investor
+                (label) Investor Label - Label to display the investor
+(button) Save For Use Button - Button to save the ratesheet for use
+    (on-click)
+        (modal) Save For Use Confirmation Modal - Modal to confirm the saving of the ratesheet for use
+            (button) Close Button - Button to close the modal
+                (on-click)
+                    Should close [Save For Use Confirmation Modal].
+            (label) Save For Use Confirmation Label - Label to display the save for use confirmation
+            (button) Post Ratesheet Button - Button to post the ratesheet
+                (on-click)
+                    Should close [Save For Use Confirmation Modal].
+                    Should run [Ratesheet Post] job.
+            (button) Cancel Button - Button to cancel the modal
+                (on-click)
+                    Should close [Save For Use Confirmation Modal].
+(button) Discard Button - Button to discard the ratesheet
+    (on-click)
+        (modal) Discard Ratesheet Confirmation Modal - Modal to confirm the discarding of the ratesheet
+            (button) Close Button - Button to close the modal
+                (on-click)
+                    Should close [Discard Ratesheet Confirmation Modal].
+            (label) Discard Ratesheet Confirmation Label - Label to display the discard ratesheet confirmation
+            (button) Discard Ratesheet Button - Button to discard the ratesheet
+                (on-click)
+                    Should close [Discard Ratesheet Confirmation Modal].
+                    Should run [Discard Ratesheet] job.

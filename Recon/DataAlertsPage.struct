@@ -1,0 +1,26 @@
+(tab) Macro Tab
+  (grid) Macro Grid - Displays list of alerts.
+    (column-definitions)
+      (column) Impact Type
+        (label) Impact Type Label
+      (column) Severity
+        (label) Severity Label
+      (column) Alert
+        (label) Alert Label
+      (column) Remedy
+        (label) Remedy Label
+  (grid) Loans Grid - Displays list of loans.
+    (row-definition) 
+      (link) Loan Number Link - Link to view loan details
+(tab) Loan Level Tab
+  (grid) Loans Grid - Displays list of loans.
+    (column-definitions)
+      (column) Loan ID
+        (link) Loan ID Link
+          (on-click) 
+            Navigates to [Loan Details Page].
+      (column) Borrower Last Name
+      (column) Impact Type
+      (column) Severity
+      (column) Alert
+      (column) Remedy
