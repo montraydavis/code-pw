@@ -1,3 +1,14 @@
+(api-collection)
+    api/queries/processlog	POST
+    api/user/platformCheck	GET
+    api/queries/data-alerts	GET
+    api/queries/clientConstant	GET
+    api/commands/jobs/status	POST
+    api/queries/procIds	GET
+    api/configuration	GET
+    api/queries/Loans/details	GET
+    api/user/profile	GET
+
 (container) Loan Details Container    
     (label) Product Code Label
     (label) Channel Label

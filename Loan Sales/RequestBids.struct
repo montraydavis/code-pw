@@ -1,0 +1,154 @@
+(api-collection)
+    POST api/commands/commit-loans/has-bid-requested-on-loans
+    POST api/commands/jobs/status
+    POST api/commands/requestBid/create
+    POST api/queries/requestBid/details
+    GET api/queries/loanfilters
+    GET api/queries/data-alerts 
+    
+(container) Loans Available For Sale Container
+    (label) Included Loans Label - Label to display the number of loans included in the bid request.
+    (label) Time Due Label - Label to display the time due for the bid request.
+    (label) Delivery Days Label - Label to display the number of days until delivery.
+    (label) Investors Label - Label to display the number of investors who have been offered to bid on the sale.
+    (label) Total UPB Label - Label to display the total UPB of the loans included in the sale.
+    (label) Conventional UPB Label - Label to display the total UPB of the conventional loans included in the sale.
+    (label) Government UPB Label - Label to display the total UPB of the government loans included in the sale.
+    (button) Request Bids Button - Button to request bids on the sale.
+        (on-click)
+            (modal) Request Bids Confirmation Modal
+                (button) Close Button - Button to close the modal.
+                (label) Request Bids Confirmation Label - Label to confirm the request bids.
+                (button) Request Bids Button - Button to request bids on the sale.                        
+                    (on-click)
+                        EXEC POST POST api/commands/commit-loans/has-bid-requested-on-loans
+                    (on-click)
+                        (if) Duplicate request name
+                            (modal) Duplicate Request Name Modal
+                                (label) Duplicate Request Name Label - Label to confirm the duplicate request name.
+                                (button) Close Button - Button to close the modal.
+                                    (on-click)
+                                        !RETURN
+                        (if) Loans include already offered loans
+                            (modal) Already Offered Loans Modal
+                                (button) Close Button - Button to close the modal.
+                                (label) Already Offered Loans Label - Label to confirm the already offered loans.
+                                (button) Confirm Button - Button to confirm the already offered loans.
+                                    (on-click)
+                                        !CONTINUE
+                                (button) Cancel Button - Button to cancel the request bids.
+                                    (on-click)
+                                        !RETURN
+                        EXEC POST api/commands/requestBid/create
+                        Should submit the bid request
+                        Should close the modal
+                        Should reset the all components of the [Loans Available For Sale Container]
+                        Should reset [Included Loans Grid]
+                        Should reset [Excluded Loans Grid]
+(container) Request Details Container - Container to display the details of the bid request.
+    (link) Show Request Details Link - Link to show the details of the bid request.
+        (on-click)
+            Should show [Details Container]
+            Should hide [Hide Request Details Link]
+            Should show [Show Request Details Link]
+    (link) Hide Request Details Link - Link to hide the details of the bid request.
+        (on-click)
+            Should hide [Details Container]
+            Should show [Show Request Details Link]
+            Should hide [Hide Request Details Link]
+    (container) Details Container - Container to display the details of the bid request.
+        (input) Request Name Input - Input to enter the name of the bid request.
+        (input) Bids Due Date Input - Input to enter the due date of the bids.
+        (input) Comments Input - Input to enter the comments for the bid request.
+        (container) Included Bulk Investors Container - Container to display the included bulk investors.
+            (input) Search Included Bulk Investors Input - Input to search the included bulk investors.
+                (on-change)
+                    Should update [Included Bulk Investors List] to include investors whose names contain the search string.
+            (dropdown) Include/Exclude All Investors Dropdown - Dropdown to include or exclude all investors.
+                (options)
+                    (option) All
+                        (on-click)
+                            Should include all investors
+                    (option) None
+                        (on-click)
+                            Should exclude all investors
+            (input) Global Days Input - Input to enter the global days.
+                (on-change)
+                    Should update [Days Input] of each [Bulk Investors Client List] row to the value of [Global Days Input].
+            (container) Bulk Investors Client List - Container to display the list of bulk investors.
+                (row-definition)
+                    (checkbox) Include/Exclude Investor Checkbox
+                        (on-checked)
+                            Should include the investor
+                        (on-unchecked)
+                            Should exclude the investor
+                    (text) Investor Name Label - Label to display the name of the investor.
+                    (input) Days Input - Input to enter the days.
+        (container) Non-Bulk Investors Container - Container to display the non-bulk investors.
+            (container) Non-Bulk Best Efforts List - Container to display the list of non-bulk best efforts investors.
+                (row-definition)
+                    (label) Investor Name Label - Label to display the name of the investor.
+            (container) Non-Bulk Cash List - Container to display the list of non-bulk cash investors.
+                (row-definition)
+                    (label) Investor Name Label - Label to display the name of the investor.
+            (container) Non-Bulk MBS List - Container to display the list of non-bulk MBS investors.
+                (row-definition)
+                    (label) Investor Name Label - Label to display the name of the investor.
+(expander) Loan Details Expander - Expander to display the loan details.
+    (container) Filters Container - Container to display the filters.
+        (dropdown) Loan Type Dropdown - Dropdown to filter by loan type.
+            (on-change)
+                Should remove all loans which do not meet the 'Loan Type' filter criteria
+        (dropdown) Loan Purpose Dropdown - Dropdown to filter by loan purpose.
+            (on-change)
+                Should remove all loans which do not meet the 'Loan Purpose' filter criteria
+        (dropdown) Loan Limit Type Dropdown - Dropdown to filter by loan limit type.
+            (on-change)
+                Should remove all loans which do not meet the 'Loan Limit Type' filter criteria
+        (dropdown) Occupancy Dropdown - Dropdown to filter by occupancy.
+            (on-change)
+                Should remove all loans which do not meet the 'Occupancy' filter criteria
+        (dropdown) Rate Type Dropdown - Dropdown to filter by rate type.
+            (on-change)
+                Should remove all loans which do not meet the 'Rate Type' filter criteria
+        (input) Min Ammort Term Input - Input to filter by minimum amortization term.
+            (on-change)
+                Should remove all loans which do not meet the 'Min Ammort Term' filter criteria
+        (input) Max Ammort Term Input - Input to filter by maximum amortization term.
+            (on-change)
+                Should remove all loans which do not meet the 'Max Ammort Term' filter criteria
+        (checkbox) Included Offered Loans Toggle - Checkbox to include offered loans.
+            (on-change)
+                Should remove all loans which do not meet the 'Included Offered Loans' filter criteria
+    (container) Loans Container - Container to display the loans.
+        (tab) Included Loans Tab - Tab to display the included loans.
+            (grid) Included Loans Grid - Grid to display the included loans.
+                (data-source)
+                    EXEC POST api/queries/requestBid/details
+                (column-definitions)
+                    (column) Include
+                        (button) Include Loan Button - Button to include a loan in bid request.
+                            (on-click)
+                                Should add +1 loan to bid request
+                                Should update [Included Loans Label]
+                                Should update [Total UPB Label]
+                                Should update [Conventional UPB Label]
+                                Should update [Government UPB Label]
+        (tab) Excluded Loans Tab - Tab to display the excluded loans.
+            (grid) Excluded Loans Grid - Grid to display the excluded loans.
+                (data-source)
+                    EXEC POST api/queries/requestBid/details
+                (column-definitions)
+                    (column) Exclude
+                        (button) Exclude Loan Button - Button to exclude a loan from bid request.
+                            (on-click)
+                                (if) Loans Included > 0
+                                    Should enable [Request Bids Button]
+                                (else)
+                                    Should disable [Request Bids Button]
+                                (on-click)
+                                    Should remove -1 loan from bid request
+                                Should update [Included Loans Label] -1
+                                Should update [Total UPB Label]
+                                Should update [Conventional UPB Label]
+                                Should update [Government UPB Label]

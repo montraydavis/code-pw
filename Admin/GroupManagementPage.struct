@@ -1,3 +1,16 @@
+(api-collection)
+    api/commands/jobs/status	POST
+    api/queries/data-alerts	GET
+    api/queries/processlog	POST
+    api/queries/procIds	GET
+    api/queries/groups/getgroupslist	GET
+    api/Queries/groups/getgroupmembershipclients	POST
+    api/configuration	GET
+    api/queries/clientConstant	GET
+    api/user/profile	GET
+    api/Commands/admin/groupmanagement/savegroupclientmembership	POST
+    api/user/platformCheck	GET
+
 (input) Search Groups Input - Input to search the groups.
     (on-change)
         Should [Fetch Groups].

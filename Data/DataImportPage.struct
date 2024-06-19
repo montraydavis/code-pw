@@ -1,7 +1,3 @@
-<!--
-
--->
-
 (dropdown) Data Type Dropdown - Dropdown to select the data type
     (options)
         (option) Encompass
@@ -123,3 +119,16 @@
                                 (on-click)
                                     Should close [Removing Eligibility Field Confirmation Modal].
 (tab) Writeback Tab - Tab to display the writeback fields
+    (button) Add Row Button - Button to add a row to the LOS Fields Grid
+        (on-click)
+            Should add a row to [LOS Fields Grid].
+    (grid) LOS Fields Grid - Grid to display the LOS Fields
+        (column-definitions)
+            (column) LOS Field ID
+                (input) LOS Field ID Input - Input to enter the LOS Field ID value
+            (column) LOS Lock Request Field ID
+                (input) LOS Lock Request Field ID Input - Input to enter the LOS Lock Request Field ID value
+    (button) Save Button - Button to save the LOS Fields
+        (on-click)
+            Should save the LOS Fields to the LOS Fields Grid.
+    (button) Cancel Button - Button to cancel the editing of the LOS Fields

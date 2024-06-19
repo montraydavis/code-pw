@@ -1,0 +1,26 @@
+(api-collection)
+    POST api/queries/glrecon
+    POST api/commands/jobs/status
+    GET api/queries/data-alerts
+
+(dropdown) Comparing From Dropdown - Dropdown to select the date to compare from
+    (on-change)
+        Should update [Attributions Grid, Summary Chart] based on start date
+(dropdown) Comparing To Dropdown - Dropdown to select the date to compare to
+    (on-change)
+        Should update [Attributions Grid, Summary Chart] based on end date
+(tab) Summary Tab
+    (chart) Summary Chart - Bar chart of the summary data
+        (data-source)
+            EXEC POST api/queries/glrecon
+(tab) Details Tab
+    (grid) Details Grid - Grid of the details data
+        (data-source)
+            EXEC POST api/queries/glrecon
+        (column-definitions)
+            (column) Category
+                (label) Category - Category of the detail
+            (column) Notional
+                (label) Notional - Notional of the detail
+            (column) Secondary Gain/Loss
+                (label) Secondary Gain/Loss - Secondary Gain/Loss of the detail

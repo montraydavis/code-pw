@@ -1,3 +1,27 @@
+(api-collection)
+  api/queries/riskposition/associatedtrades	POST
+  api/queries/riskposition/blottertrades	GET
+  api/queries/projections/projected-fallout/get-projected-fallout-loans/pf-loansExpiringToday/	GET
+  api/queries/projections/projected-loan-sales/get-projected-loans/pls-loansAvailableForSale/	GET
+  api/commands/projections/save-projections-settings	POST
+  api/commands/projections/save-amounts	POST
+  api/commands/jobs/status	POST
+  api/tradeAssistant/save-settings	POST
+  api/queries/projections/get-amounts	GET
+  api/queries/projections/projected-settings/get-projected-lock-settings	GET
+  api/queries/data-alerts	GET
+  api/queries/riskposition	POST
+  api/queries/riskposition/lastupdate	POST
+  api/queries/riskposition/brokerdealers	GET
+  api/queries/get-benchmarks	GET
+  api/queries/projections/get-projections-settings	GET
+  api/queries/riskposition/brokermargindetails	POST
+  api/commands/riskposition/save-projections	POST
+  api/queries/commitloans/bidrequestdetail	POST
+  api/tradeAssistant/get-settings	GET
+  api/queries/riskposition/marketmovement	GET
+  api/commands/run-job	POST
+
 (@on-signalr, @on-load)
   (if) Job Status is 'REFRESHING RISK'
     [Refresh Risk Job Running Banner, Refresh Risk Position Button, Projections Button, Trade Assistant Button, Clear Activity Dropdown] should be visible.

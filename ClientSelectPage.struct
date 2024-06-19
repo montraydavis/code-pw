@@ -1,3 +1,10 @@
+(api-collection)
+  api/commands/jobs/status	POST
+  api/user/impersonate	POST
+  api/queries/user/grouphierarchyaccess	POST
+  api/queries/data-alerts	GET
+  api/queries/clientConstant	GET
+
 (@on-load)
   (if) Already selected a client
     Display [Exit Client Selection Button]

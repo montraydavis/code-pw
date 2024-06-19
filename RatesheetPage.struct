@@ -1,3 +1,10 @@
+(api-collection)
+    api/queries/data-alerts	GET
+    api/commands/jobs/status	POST
+    api/queries/ratesheet/reconciliation/prior	GET
+    api/commands/ratesheet/create/UNMB	POST
+    api/queries/ratesheet/reconciliation/priorratesheetdetail	GET
+
 (@on-load)
     (if) Client has an existing ratesheet
         Should display [Ratesheet Details Container].

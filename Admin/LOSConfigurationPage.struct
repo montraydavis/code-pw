@@ -1,3 +1,11 @@
+(api-collection)
+    api/queries/admin/getlosfiltervalidation/	POST
+    api/commands/jobs/status	POST
+    api/queries/commitloans/losversions	GET
+    api/queries/data-alerts	GET
+    api/commands/admin/savelosconfiguration	POST
+    api/queries/admin/losconfiguration	GET
+
 (dropdown) LOS Connection Dropdown - Dropdown to select the LOS connection.
 (container) Authentication Settings Container - Container to display the authentication settings.
     (input) LOS ID Input - Input to enter the LOS ID.

@@ -1,0 +1,93 @@
+(tab) Open - Residual Tab
+    (grid) Open - Residual Grid
+        (column-definitions)
+            (column) Commitment ID
+                (link) Commitment ID Link
+                    (on-click) 
+                        Should navigate to [Commitment Loan Details Page].
+            (column) Trade Date
+                (label) Trade Date Label
+            (column) Settle Date
+                (label) Settle Date Label
+            (column) Trade Type
+                (label) Trade Type Label
+            (column) Security ID
+                (label) Security ID Label
+            (column) Investor
+                (label) Investor Label
+            (column) Coupon
+                (label) Coupon Label
+            (column) Original Amount
+                (label) Original Amount Label
+            (column) Residual Amount
+                (label) Residual Amount Label
+            (column) Unshipped Amount
+                (label) Unshipped Amount Label
+            (column) Unpurchased Amount
+                (label) Unpurchased Amount Label
+            (column) Original Price
+                (label) Original Price Label
+            (column) Current Price
+                (label) Current Price Label
+(tab) Unsettled Commitments Tab
+    (grid) Unsettled Commitments Grid
+        (column-definitions)
+            (column) Commitment ID
+                (link) Commitment ID Link
+                    (on-click) 
+                        Should navigate to [Commitment Loan Details Page].
+            (column) Trade Date
+                (label) Trade Date Label
+            (column) Settle Date
+                (label) Settle Date Label
+            (column) Trade Type
+                (label) Trade Type Label
+            (column) Security ID
+                (label) Security ID Label
+            (column) Investor
+                (label) Investor Label
+            (column) Coupon
+                (label) Coupon Label
+            (column) Original Amount
+                (label) Original Amount Label
+            (column) Residual Amount
+                (label) Residual Amount Label
+            (column) Unshipped Amount
+                (label) Unshipped Amount Label
+            (column) Unpurchased Amount
+                (label) Unpurchased Amount Label
+            Original Price
+                (label) Original Price Label
+            (column) Current Price
+                (label) Current Price Label
+(tab) All Commitments Tab
+    (grid) All Commitments Grid
+        (column-definitions)
+            (column) Commitment ID
+                (link) Commitment ID Link
+                    (on-click) 
+                        Should navigate to [Commitment Loan Details Page].
+            (column) Trade Date
+                (label) Trade Date Label
+            (column) Settle Date
+                (label) Settle Date Label
+            (column) Trade Type
+                (label) Trade Type Label
+            (column) Security ID
+                (label) Security ID Label
+            (column) Investor
+                Investor Label
+            (column) Coupon
+                (label) Coupon Label
+            (column) Original Amount
+                (label) Original Amount Label
+            (column) Residual Amount
+                (label) Residual Amount Label
+            (column) Unshipped Amount
+                (label) Unshipped Amount Label
+            (column) Unpurchased Amount
+                (label) Unpurchased Amount Label
+            (column) Original Price
+                (label) Original Price Label
+            (column) Current Price
+                (label) Current Price Label

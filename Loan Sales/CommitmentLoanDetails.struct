@@ -1,0 +1,52 @@
+(container) Commitment Details Container
+    (column) Commitment ID Input
+    (column) Commitment ID Edit Button
+    (column) Commitment Amount Input
+    (column) Commitment Amount Edit Button
+    (column) Expiration Date Input
+    (column) Expiration Date Edit Button
+(container) Loan Details Container
+    (column) Price Label
+    (column) Allocated Amount Label
+    (column) Open Trade Amount
+    (column) Paired Out Amount
+    (column) Pair Out Button
+    (tab) Allocated Tab
+        (container) Allocated Loans Grid
+            (column-definitions)
+                (column) Selection
+                    (checkbox) Selection Checkbox
+                (column) Loan ID
+                    (link) Loan ID Link
+                (column) Price
+                    (label) Price Label
+                (column) Product Code
+                    (label) Product Code Label
+                (column) Note Rate
+                    (label) Note Rate Label
+                (column) Amount
+                    (label) Amount Label
+                (column) Allocation Date
+                    (label) Allocation Date Label
+                (column) Purchase Date
+                    (label) Purchase Date Label
+    (tab) Available to Allocate Tab
+        (container) Available to Allocate Loans Grid
+            (column-definitions)
+                (column) Selection
+                    (checkbox) Selection Checkbox
+                (column) Loan ID
+                    (link) Loan ID Link
+                (column) Price
+                    (label) Price Label
+                (column) Product Code
+                    (label) Product Code Label
+                (column) Note Rate
+                    (label) Note Rate Label
+                (column) Amount
+                    (label) Amount Label
+                (column) Allocation Date
+                    (label) Allocation Date Label
+                (column) Purchase Date
+                    (label) Purchase Date Label
+    (tab) Document/Files Tab

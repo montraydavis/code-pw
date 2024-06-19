@@ -1,3 +1,22 @@
+(api-collection)
+  api/queries/hedge/tradeconfirmation/availableconfirm	GET
+  api/commands/hedge/tradeconfirmation/deleteavailableconfirms	POST
+  api/queries/hedge/trademanagement/completeconfirmation	POST
+  api/queries/hedge/trademanagement/getMatchingTrade	POST
+  api/queries/hedge/tradeconfirmation/Instrument/NULL	GET
+  api/commands/jobs/status	POST
+  api/queries/hedge/tradeconfirmation/brokerdealersClientWise/NULL	GET
+  api/queries/clients	GET
+  api/commands/hedge/trade-confirmation/skip-confirmation	POST
+  api/user/platformCheck	GET
+  api/queries/clientConstant	GET
+  api/configuration	GET
+  api/queries/procIds	GET
+  api/commands/jobs/status	POST
+  api/queries/hedge/tradeconfirmation/unconfirmedtrades	POST
+  api/queries/processlog	POST
+  api/user/profile	GET
+  api/queries/hedge/tradeconfirmation/verbalconfirms	GET
 (tab) Blind Confirms Tab
   (button) Browse Files Button
   (button) Upload Selected Files Button

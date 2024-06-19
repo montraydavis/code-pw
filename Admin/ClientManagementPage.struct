@@ -1,3 +1,14 @@
+(api-collection)
+    api/queries/clients/getanalystassigned	GET
+    api/queries/data-alerts	GET
+    api/Queries/clients/getcpfiles	POST
+    api/queries/clients/getteamassigned	GET
+    api/queries/clients/clientidservice/getallclients	GET
+    api/queries/clients/getclientstype	GET
+    api/queries/clients/getclientslist	POST
+    api/commands/jobs/status	POST
+    api/queries/clients/getusers	GET
+
 (input) Search Clients Input - Input to search the clients.
     (on-change)
         Should [Fetch Clients].

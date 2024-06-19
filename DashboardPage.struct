@@ -1,3 +1,29 @@
+(api-endpoint-collection)
+  GET api/queries/dashboard/loansforsale
+  POST api/commands/jobs/status
+  GET api/queries/dashboard/recenttrades
+  POST api/queries/riskposition/lastupdate
+  GET api/queries/dashboard/daymanager
+  GET api/queries/dashboard/shockprofile
+  GET api/queries/data-alerts
+  GET api/configuration
+  GET api/queries/dashboard/fallout
+  GET api/queries/procIds
+  GET api/queries/clientConstant
+  GET api/queries/dashboard/loansalesrollingthirty
+  POST api/queries/processlog
+  GET api/queries/dashboard/positionpipeline
+  POST api/queries/commitloans/bidrequestdetail
+  GET api/queries/dashboard/marketmovement
+  GET api/queries/dashboard/loansalesummary
+  GET api/queries/dashboard/locks
+  GET api/queries/dashboard/lockvolume
+  POST api/queries/riskposition
+  GET api/user/profile
+  GET api/user/platformCheck
+  POST api/queries/commitloans/activebidrequests
+  POST   api/signalr/negotiate
+
 (container) Position Pipeline Container
   (link) Position Pipeline Link
     (on-click)
@@ -109,6 +135,9 @@
     (on-click)
       Navigates to [Trade Management Page]
   (grid) Recent Trades Grid
+    (data-source)
+      GET api/queries/dashboard/recenttrades
+
     (column-definitions)
       (column) Security ID
       (column) Buy/Sell
@@ -119,12 +148,18 @@
       (column) Amount (M)
 (container) Lock Volume Container
   (grid) Lock Volume Grid
+    (data-source)
+      GET api/queries/dashboard/lockvolume
+
     (column-definitions)
       (column) Type
       (column) Day Overy Day
       (column) Month to Date
       (column) Last 45 Days
   (grid) Channel Grid
+    (data-source)
+      GET api/queries/dashboard/lockvolume
+
     (column-definitions)
       (column) Channel Status
       (column) Locks (M)

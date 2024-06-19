@@ -1,0 +1,29 @@
+(api-collection)
+    POST api/commands/jobs/status
+    POST api/queries/commitloans/bidrequestdetail
+    GET api/queries/dashboard/locks
+    POST api/queries/positionrecon
+    GET api/queries/dashboard/shockprofile
+    GET api/queries/dashboard/fallout
+    POST api/queries/riskposition/lastupdate
+
+(dropdown) Comparing From Dropdown - Dropdown to select the date to compare from
+    (on-change)
+        Should update [Attributions Grid] based on start date
+(dropdown) Comparing To Dropdown - Dropdown to select the date to compare to
+    (on-change)
+        Should update [Attributions Grid] based on end date
+(grid) Attributions Grid - Grid to display the attributions
+    (data-source)
+        EXEC POST api/queries/positionrecon
+    (column-definitions)
+        (column) Attribution Categories
+            (label) Attribution Categories - Label to display the attribution categories
+        (column) Unclosed Position
+            (label) Unclosed Position - Label to display the unclosed position
+        (column) Closed Position
+            (label) Closed Position - Label to display the closed position
+        (column) Hedge Position
+            (label) Hedge Position - Label to display the hedge position
+        (column) Net Position Change
+            (label) Net Position Change - Label to display the net position change

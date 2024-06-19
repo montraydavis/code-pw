@@ -1,3 +1,13 @@
+(api-collection)
+    api/queries/ratesheet/settings/FannieMaeSrp	GET
+    api/queries/lookups/states	GET
+    api/queries/ratesheet/settings/FannieMae/Retained	GET
+    api/queries/data-alerts	GET
+    api/queries/ratesheet/settings/freddiemacctos	GET
+    api/queries/ratesheet/settings/FreddieMac/Retained	GET
+    api/commands/jobs/status	POST
+    api/queries/ratesheet/settings/FreddieMac/Released	GET
+
 (tab) FANNIE MAE Tab
     (container) Ratesheet Settings Container
         (input) Username Input - Input to set the username for the Fannie MAE seller.
