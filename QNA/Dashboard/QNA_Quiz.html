@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QNA_Quiz.md</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p><strong>General Questions</strong></p>
+<ol>
+<li><strong>What is the purpose of the Dashboard Page?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> The Dashboard Page is used for logging in to the system.</p>
+<p>•  <strong>Correct Answer:</strong> The Dashboard Page provides an overview of key financial metrics and data related to loans, market movements, trades, and investor activities.</p>
+<p><strong>API Endpoints</strong></p>
+<ol start="2">
+<li><strong>Which API is used to fetch loan sale data?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> POST api/queries/dashboard/loansforsale</p>
+<p>•  <strong>Correct Answer:</strong> The APIs used include GET api/queries/dashboard/loansforsale and GET api/queries/dashboard/loansalesrollingthirty.</p>
+<ol start="3">
+<li><strong>How do you update the risk position data?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Using GET api/queries/riskposition</p>
+<p>•  <strong>Correct Answer:</strong> The risk position data is updated using the API POST api/queries/riskposition.</p>
+<ol start="4">
+<li><strong>What API is called to get user profile information?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> POST api/user/profile</p>
+<p>•  <strong>Correct Answer:</strong> The API GET api/user/profile is called to get user profile information.</p>
+<ol start="5">
+<li><strong>Which API is used to fetch recent trades data?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> POST api/queries/dashboard/recenttrades</p>
+<p>•  <strong>Correct Answer:</strong> The API GET api/queries/dashboard/recenttrades is used to fetch recent trades data.</p>
+<ol start="6">
+<li><strong>How is the status of jobs updated?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Using GET api/commands/jobs/status</p>
+<p>•  <strong>Correct Answer:</strong> The status of jobs is updated using the API POST api/commands/jobs/status.</p>
+<ol start="7">
+<li><strong>Which API endpoint provides the configuration settings?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> POST api/configuration</p>
+<p>•  <strong>Correct Answer:</strong> The configuration settings are provided by the API GET api/configuration.</p>
+<p><strong>Position Pipeline Container</strong></p>
+<ol start="8">
+<li><strong>What happens when you click on the Position Pipeline Link?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> It logs the user out.</p>
+<p>•  <strong>Correct Answer:</strong> Clicking on the Position Pipeline Link navigates to the Hedge Selection Tool Page.</p>
+<ol start="9">
+<li><strong>What labels are present in the Position Pipeline Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Username Label and Password Label</p>
+<p>•  <strong>Correct Answer:</strong> The labels present are the Net Position Amount Label and the Loan Pipeline Amount Label.</p>
+<ol start="10">
+<li><strong>What actions are triggered by clicking on the links/buttons in the Position Pipeline Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> It refreshes the page.</p>
+<p>•  <strong>Correct Answer:</strong> Clicking on the Position Pipeline Link navigates to the Hedge Selection Tool Page.</p>
+<p><strong>Market Movement Container</strong></p>
+<ol start="11">
+<li><strong>Which labels display market delta values in the Market Movement Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Total Delta Label and Average Delta Label</p>
+<p>•  <strong>Correct Answer:</strong> The labels are Market Delta - RS Label and Market Delta - Today Label.</p>
+<p><strong>Loans Available for Sale Container</strong></p>
+<ol start="12">
+<li><strong>What is the function of the Loans Available for Sale Link?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> To navigate to the Home Page</p>
+<p>•  <strong>Correct Answer:</strong> The function of the Loans Available for Sale Link is to navigate to the Request Bids Page.</p>
+<ol start="13">
+<li><strong>Which labels indicate the loan amounts in the Loans Available for Sale Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Loan Type Label and Interest Rate Label</p>
+<p>•  <strong>Correct Answer:</strong> The labels are Loans Amount Label and Total UPB Amount Label.</p>
+<ol start="14">
+<li><strong>What are the actions triggered by clicking on links in the Loans Available for Sale Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> It saves the current settings.</p>
+<p>•  <strong>Correct Answer:</strong> Clicking on the Loans Available for Sale Link navigates to the Request Bids Page.</p>
+<p><strong>Latest Bid Request Container</strong></p>
+<ol start="15">
+<li><strong>What labels are included in the Latest Bid Request Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Bidder Name Label and Bid Amount Label</p>
+<p>•  <strong>Correct Answer:</strong> The labels include Bids Received Date Label, Loans with Bids Count Label, and Bids Due Date Label.</p>
+<ol start="16">
+<li><strong>Where does the Latest Bid Request Link navigate to?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> To the Login Page</p>
+<p>•  <strong>Correct Answer:</strong> The Latest Bid Request Link navigates to the Commit Loans Page.</p>
+<p><strong>Shock Profile Container</strong></p>
+<ol start="17">
+<li><strong>What tabs are available in the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Summary Tab, Details Tab, and Data Tab</p>
+<p>•  <strong>Correct Answer:</strong> The available tabs are Gain/Loss Tab, Position Tab, and Shock Data Tab.</p>
+<ol start="18">
+<li><strong>What is the purpose of the Gain/Loss Tab in the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> To display the total profit only.</p>
+<p>•  <strong>Correct Answer:</strong> The Gain/Loss Tab displays the Gain/Loss Chart, which shows the gain or loss over a period.</p>
+<ol start="19">
+<li><strong>What data is displayed in the Position Tab of the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Only the total positions</p>
+<p>•  <strong>Correct Answer:</strong> The Position Tab shows the Position Chart, which details the positions held.</p>
+<ol start="20">
+<li><strong>What information is found in the Shock Data Tab of the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Historical shock data only.</p>
+<p>•  <strong>Correct Answer:</strong> The Shock Data Tab includes the Shock Data Grid, displaying columns such as Rate Shock, Price, Change 32nds, and Unclosed…</p>
+<ol start="21">
+<li><strong>What type of chart is displayed under the Gain/Loss Tab in the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Pie Chart</p>
+<p>•  <strong>Correct Answer:</strong> The Gain/Loss Chart is displayed under the Gain/Loss Tab.</p>
+<ol start="22">
+<li><strong>What type of chart is displayed under the Position Tab in the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Line Chart</p>
+<p>•  <strong>Correct Answer:</strong> The Position Chart is displayed under the Position Tab.</p>
+<ol start="23">
+<li><strong>What data is displayed in the Shock Data Tab of the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> General market data</p>
+<p>•  <strong>Correct Answer:</strong> The Shock Data Grid is displayed under the Shock Data Tab, showing columns such as Rate Shock, Price, Change 32nds, and Unclosed…</p>
+<ol start="24">
+<li><strong>What columns are defined in the Shock Data Grid within the Shock Profile Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Only the Price and Rate Shock columns</p>
+<p>•  <strong>Correct Answer:</strong> The columns are Rate Shock, Price, Change 32nds, and Unclosed…</p>
+<p><strong>Fallout Container</strong></p>
+<ol start="25">
+<li><strong>What label displays the fallout amount in the Fallout Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Total Amount Label</p>
+<p>•  <strong>Correct Answer:</strong> The Fallout Amount Label displays the fallout amount.</p>
+<ol start="26">
+<li><strong>What type of chart is included in the Fallout Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Pie Chart</p>
+<p>•  <strong>Correct Answer:</strong> The Fallout Chart is included.</p>
+<ol start="27">
+<li><strong>What data source is used for the Fallout Container’s chart?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Local static data</p>
+<p>•  <strong>Correct Answer:</strong> The data source for the Fallout Chart is not specified, but it likely pulls from one of the defined APIs such as GET api/queries/dashboard/fallout.</p>
+<p><strong>Loan Sales Summary Container</strong></p>
+<ol start="28">
+<li><strong>What options are available in the Product Type Dropdown in the Loan Sales Summary Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Fixed, Adjustable, and Hybrid</p>
+<p>•  <strong>Correct Answer:</strong> The options are Conv30, Conv 15, and Gov 30.</p>
+<ol start="29">
+<li><strong>What options are available in the Days Dropdown in the Loan Sales Summary Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> 7, 14, 21, 28</p>
+<p>•  <strong>Correct Answer:</strong> The options are 30, 60, 90, and 120.</p>
+<ol start="30">
+<li><strong>What type of chart is included in the Loan Sales Summary Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Line Chart</p>
+<p>•  <strong>Correct Answer:</strong> The Loan Sales Summary Chart is included.</p>
+<ol start="31">
+<li><strong>What columns are present in the grid of the Loan Sales Summary Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Loan Type and Interest Rate</p>
+<p>•  <strong>Correct Answer:</strong> There is no grid specifically mentioned within the Loan Sales Summary Container, but it includes the Loan Sales Summary Chart and dropdowns for filtering data.</p>
+<ol start="32">
+<li><strong>What dropdown options filter data in the Loan Sales Summary Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Loan Type and Status</p>
+<p>•  <strong>Correct Answer:</strong> The Product Type Dropdown options are Conv30, Conv 15, and Gov 30; the Days Dropdown options are 30, 60, 90, and 120.</p>
+<p><strong>Loan Sales (Rolling in 30 Days) Container</strong></p>
+<ol start="33">
+<li><strong>What columns are included in the Loan Sales (Rolling in 30 Days) Grid?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Loan Type, Amount, and Interest Rate</p>
+<p>•  <strong>Correct Answer:</strong> The columns are Agency Label, Lender (Conv, Govt), and Cohort (Conv, Govt).</p>
+<ol start="34">
+<li><strong>What type of data is displayed in the grid of the Loan Sales (Rolling in 30 Days) Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Monthly Sales Data</p>
+<p>•  <strong>Correct Answer:</strong> The grid displays data with columns for Agency Label, Lender (Conv, Govt), and Cohort (Conv, Govt).</p>
+<p><strong>Top Investors Container</strong></p>
+<ol start="35">
+<li><strong>What grids are included in the Top Investors Container?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> All Investors Grid and Top Ten Lenders Grid</p>
+<p>•  <strong>Correct Answer:</strong> The grids included are the Top Five Lenders Grid and the Cohort Top Five Investors Grid.</p>
+<ol start="36">
+<li><strong>What columns are defined in the Top Five Lenders Grid?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Investor Name, Loan Amount, and Interest Rate</p>
+<p>•  <strong>Correct Answer:</strong> The columns are Investor, Amount (M), and Percent.</p>
+<ol start="37">
+<li><strong>What columns are defined in the Cohort Top Five Investors Grid?</strong></li>
+</ol>
+<p>•  <strong>Incorrect Answer:</strong> Investor Name, Loan</p>
+</div>
+</body>
+
+</html>
